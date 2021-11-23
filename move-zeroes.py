@@ -34,6 +34,7 @@ class Solution:
                     nums[i+1] = temp
                 print(nums)
 
+    #NOTE: O(n). Move the non-zeros to the front of `nums`, hence the remainders will be all zeros!
     def moveZeroes(self, nums: List[int]) -> None:
         i = count = 0
         while i < len(nums):
@@ -48,5 +49,6 @@ class Solution:
 
 if __name__ == '__main__':
 
-    # print(Solution().moveZeroes([0,1,2,3,12]))
+    print(Solution().moveZeroes([0,1,-10,3,12]))
     print(Solution().moveZeroes([0,1,0,3,12]))
+    print(Solution().moveZeroes([0]))
