@@ -42,7 +42,7 @@ class Solution:
     def twoSum_On2_memory(self, nums: List[int], target: int) -> List[int]:
         return [[idx_a, idx_b] for idx_a in range(len(nums)) for idx_b in range(idx_a+1, len(nums)) if (nums[idx_a] + nums[idx_b]) == target][0]
 
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+    def _twoSum(self, nums: List[int], target: int) -> List[int]:
         canditates = [ (index, val, val - target) for index, val in enumerate(nums) if val - target <= 0 ]
         for idx_a in range(len(canditates)):
             for idx_b in range(len(nums)):
@@ -51,9 +51,27 @@ class Solution:
                 print(canditates[idx_a][2], nums[idx_b])
                 if (canditates[idx_a][2] + nums[idx_b]) == 0:
                     return canditates[idx_a][0], idx_b
-            
-
-        
+    
+    #NOTE: This can be boosted by following version, since the element in `nums` can only occure once (i.e. the returned indexs must not equal!).
+    def _twoSum(self, nums: List[int], target: int) -> List[int]:
+        canditates = { target - val : index for index, val in enumerate(nums) }
+        for ele, index in canditates.items():
+            for i in range(len(nums)):
+                if ele == nums[i] and i != index:
+                    print(target - ele, nums[i], target)
+                    return index, i
+    
+    #NOTE: O(n) awesome! Inspired by above.
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        '''Simultaneously,
+        i.  Construct a dictionary `canditates` with key `target - element`
+        ii. Find the complement element of `nums` in `canditates`.
+        '''
+        canditates = {}
+        for index, ele in enumerate(nums):
+            if canditates.get(ele) is not None: #or, ele in canditates
+                return canditates[ele], index
+            canditates[target - ele] = index
 
 if __name__ == '__main__':
 
