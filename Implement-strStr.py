@@ -46,13 +46,11 @@ class Solution:
         offset = len(needle)
         if offset == 0:
             return 0
-        for idx in range(len(haystack)):
+        for idx in range(len(haystack)-offset+1):
             if needle == haystack[idx:(idx+offset)]:
                 #print('stop at',idx)
-                break
-        else:
-            return -1
-        return idx
+                return idx
+        return -1
 
 
 if __name__ == '__main__':
