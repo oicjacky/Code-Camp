@@ -25,14 +25,14 @@
     - [x] 121. Best Time to Buy and Sell Stock
 
 - Week 2
-    - [ ] 169. Majority Element
-    - [ ] 290. Word Pattern
+    - [x] 169. Majority Element
+    - [x] *290. Word Pattern
     - [ ] 202. Happy Number
-    - [ ] 217. Contains Duplicate
-    - [ ]
-    - [ ]
+    - [x] *217. Contains Duplicate
+    - [ ] 141. Linked List Cycle
+    - [ ] -------------------
     - [ ] 208. Implement Trie (Prefix Tree)
     - [ ] 138. Copy List with Random Pointer
     - [x] 1. Two Sum
-    - [ ] 242. Valid Anagram
-    - [ ] 349. Intersection of Two Arrays
+    - [x] 242. Valid Anagram
+    - [x] 349. Intersection of Two Arrays
