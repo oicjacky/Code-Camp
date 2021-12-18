@@ -1,10 +1,9 @@
 ''' Day 8: Seven Segment Search 
 Reference
 ---------
-[jack-mil's github](https://github.com/jack-mil/advent_of_code/blob/master/2021/8.py)
+    `questuin_1` in [jack-mil's github](https://github.com/jack-mil/advent_of_code/blob/master/2021/8.py)
 '''
-
-TEST = True
+TEST = False
 INPUTS = 'puzzle_8.txt' if not TEST else 'puzzle_8_test.txt'
 
 def read_puzzle_input(input):
@@ -13,6 +12,7 @@ def read_puzzle_input(input):
     return con
 DIGITS = read_puzzle_input(INPUTS)
 DIGITS_OUTPUT = list(map(lambda s: s.split(' | ')[1], DIGITS))
+DIGITS_INPUT = list(map(lambda s: s.split(' | ')[0].split(), DIGITS))
 
 def question_1():
     '''Count digits 1 4 7 or 8 in output
@@ -36,32 +36,81 @@ def question_1():
                 ans += 1
     print(f'The number of digits 1, 4, 7, 8 w.r.t {segments_1478} is {ans}.')
     
+def decoder(length2input: dict) -> dict:
+    ''' By inference of input digits with the known unique ones, (1, 4, 7, 8),
+    we get the the mapping between signal wires and segments called `decoder`.
+
+    Reference
+    ---------
+    My friend Sam's advise and inspiration in 'Advent_of_Code/puzzle_8_part2.png'
+    '''
+    # 1 + len_5 -> 3
+    three = None
+    for ele in length2input[5]:
+        if all([ e in ele for e in length2input[2][0] ]):
+            three = ele
+            length2input[5].remove(ele)
+    
+    # 3 + len_6 -> 9
+    nine = None
+    for ele in length2input[6]:
+        if all([ e in ele for e in three ]):
+            nine = ele
+            length2input[6].remove(ele)
+
+    # 1 + len_6 -> 0 -> 6
+    zero = six = None
+    for ele in length2input[6]:
+        if all([ e in ele for e in length2input[2][0] ]):
+            zero = ele
+            length2input[6].remove(ele)
+    six = length2input[6][0]
+    length2input[6].remove(six)
+
+    # 9 + len_5 -> 5 -> 2
+    five = two = None
+    for ele in length2input[5]:
+        if all([ e in nine for e in ele ]):
+            five = ele
+            length2input[5].remove(ele)
+    two = length2input[5][0]
+    length2input[5].remove(two)
+
+    one = length2input[2][0]
+    four = length2input[4][0]
+    seven = length2input[3][0]
+    eight = length2input[7][0]
+    #print(length2input, three, nine, zero, six, five, two)
+    decoded = { tuple(sorted(ele)) : idx \
+        for idx, ele in enumerate([zero, one, two, three, four, five, six, seven, eight, nine]) }
+    return decoded
+
+def question_2():
+    ''' Use `decoder` generating deoced mapping configuration 
+    to solve the output digits.
+    '''
+    decoded_output = []
+    for index, (input ,output) in enumerate(zip(DIGITS_INPUT, DIGITS_OUTPUT)):
+        print('index', index)
+        length2input = {}
+        for ele in input:
+            l = len(ele)
+            if l not in length2input:
+                length2input[l] = [ele]
+            else:
+                length2input[l] += [ele]
+        decoded = decoder(length2input)
+
+        four_digit = output.split(' ')
+        decode_digit = ''
+        for ele in four_digit:
+            decode_digit += str(decoded[tuple(sorted(ele))])
+        decoded_output.append(int(decode_digit))
+    print('The answer is', sum(decoded_output))
+
 
 if __name__ == '__main__':
     
-    print('Input digits', DIGITS, 'output', DIGITS_OUTPUT)
+    print('Input digits', DIGITS[:10])
     question_1()
-
-    decoder = {
-        'acedgfb': 8,
-        'cdfbe': 5,
-        'gcdfa': 2,
-        'fbcad': 3,
-        'dab': 7,
-        'cefabd': 9,
-        'cdfgeb': 6,
-        'eafb': 4,
-        'cagedb': 0,
-        'ab': 1
-    }
-
-    for output_str in DIGITS_OUTPUT:
-        output_list = output_str.split()
-
-        decoded = ''
-        for val in output_list:
-            for k, v in decoder.items():
-                if set(val) == set(k):
-                    print(val, k)
-                    decoded += str(v)
-        print(decoded)
+    question_2()
