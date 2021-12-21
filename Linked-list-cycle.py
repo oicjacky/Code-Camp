@@ -31,29 +31,11 @@ pos is -1 or a valid index in the linked-list.
  
 Follow up: Can you solve it using O(1) (i.e. constant) memory?
 '''
+import sys
+sys.path.append(r'C:\Users\user\Pyvirtualenv\code_test')
+
+from utils import ListNode, Generator
 from typing import Optional
-
-class ListNode:
-    ''' Definition for singly-linked list. '''
-    def __init__(self, x):
-        self.val = x
-        self.next = None
-
-    def __repr__(self) -> str:
-        return f"ListNode{{val: {self.val}, next: {self.next} }}"
-
-def generate_listnode(input_list: list, pos: int) -> ListNode:
-    if not input_list:
-        return ListNode(None)
-    list_nodes = [ ListNode(ele) for ele in input_list]
-    for index in range(len(list_nodes)-1):
-        if not list_nodes[index].next:
-            list_nodes[index].next = list_nodes[index+1]
-    if pos >= 0:
-        list_nodes[-1].next = list_nodes[pos]
-    else:
-        list_nodes[-1].next = None
-    return list_nodes[0]
     
 class Solution:
 
@@ -93,8 +75,8 @@ class Solution:
 
 if __name__ == '__main__':
 
-    print(Solution().hasCycle(generate_listnode([3,2,0,-4], 1))) #T
-    print(Solution().hasCycle(generate_listnode([1,2], 0))) #T
-    print(Solution().hasCycle(generate_listnode([1], -1))) #F
-    print(Solution().hasCycle(generate_listnode([1,2], -1))) #F
-    print(Solution().hasCycle(generate_listnode([], -1))) #F
+    print(Solution().hasCycle(Generator.generate_listnode([3,2,0,-4], 1))) #T
+    print(Solution().hasCycle(Generator.generate_listnode([1,2], 0))) #T
+    print(Solution().hasCycle(Generator.generate_listnode([1], -1))) #F
+    print(Solution().hasCycle(Generator.generate_listnode([1,2], -1))) #F
+    print(Solution().hasCycle(Generator.generate_listnode([], -1))) #F
