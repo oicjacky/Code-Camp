@@ -42,7 +42,7 @@ class Solution:
         if not root.left and not root.right:
             print(root.val, 'has no children.')
             return [str(root.val)]
-        print(root.val, 'has children, finding left and right.')
+        print(root.val, 'has children, finding left and right by', self.binaryTreePaths.__name__)
         results = sum(map(self.binaryTreePaths, (root.left, root.right)), [])
         results = [str(root.val) + '->' + substr for substr in results]
         print('results', results)
