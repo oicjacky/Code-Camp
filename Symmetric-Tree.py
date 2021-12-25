@@ -27,6 +27,9 @@ from utils import TreeNode, Generator
 from typing import Optional
 
 class Solution:
+    
+    #NOTE: use 'binary tree path' to list all paths and check it is
+    # symmetric or not.
     def isSymmetric(self, root: Optional[TreeNode]) -> bool:
         if not root.left and not root.right:
             return True
@@ -61,7 +64,36 @@ class Solution:
         if all([ val%2 == 0 for val in symmetric_counter.values()]):
             return True
         return False
-        
+    
+    #NOTE: a better way, faster and less memory.
+    def isSymmetric(self, root: TreeNode) -> bool:
+        def is_symmetric(node1: TreeNode, node2: TreeNode) -> bool:
+            if not node1 or not node2:
+                #print('not node1 or not node2: NoneNone or NoneTreeNode')
+                return node1 is node2
+            #print('under', node1.val, node2.val)
+            return node1.val == node2.val and \
+                   is_symmetric(node1.left, node2.right) and \
+                   is_symmetric(node1.right, node2.left)
+        return is_symmetric(root.left, root.right)
+
+    #NOTE: stack, a LIFO queue
+    def isSymmetric(self, root: TreeNode) -> bool:
+        stack = [(root.left, root.right)]
+        while stack:
+            node1, node2 = stack.pop()
+            if not node1 or not node2:
+                if node1 is not node2:
+                    print('None & TreeNode')
+                    return False
+                else:
+                    continue
+            if node1.val != node2.val:
+                return False
+            print('adding left & ritht of node1 and node2', node1.val, node2.val)
+            stack.append((node1.left, node2.right))
+            stack.append((node1.right, node2.left))
+        return True
 
 
 if __name__ == '__main__':
