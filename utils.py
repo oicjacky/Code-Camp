@@ -37,7 +37,8 @@ class Generator:
 
     @staticmethod
     def generate_tree(tree_inputs: list) -> TreeNode:
-        tree_nodes = [ TreeNode(ele) if ele else ele for ele in tree_inputs]
+        tree_nodes = [ TreeNode(ele) if ele is not None else ele \
+                        for ele in tree_inputs]
         counter_id = 1
         for node in tree_nodes:
             if not node:
@@ -50,4 +51,11 @@ class Generator:
                 if counter_id >= len(tree_nodes): break
                 node.right = tree_nodes[counter_id]
                 counter_id += 1
-        return tree_nodes[0]
+        return tree_nodes[0] if tree_nodes else None
+
+
+if __name__ == '__main__':
+    
+    print(Generator.generate_tree([0,2,4,1,1,3,3]))
+    print(Generator.generate_tree([5]))
+    print(Generator.generate_tree([]))
