@@ -65,9 +65,11 @@ class Solution:
         print('under', root.val, 'right is', right)
         return max([left, right]) + 1
 
+
 if __name__ == '__main__':
 
     print(Solution().maxDepth(Generator.generate_tree([3,9,20,None,None,15,7]))) #3
     print(Solution().maxDepth(Generator.generate_tree([1,None,2,None]))) #2
     print(Solution().maxDepth(Generator.generate_tree([5])))  #1
-    print(Solution().maxDepth(Generator.generate_tree([1,2,3,4,None,None,5]))) #3    
+    print(Solution().maxDepth(Generator.generate_tree([1,2,3,4,None,None,5]))) #3
+    print(Solution().maxDepth(Generator.generate_tree([0,2,4,1,None,3,-1,5,1,None,6,None,8]))) #4
