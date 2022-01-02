@@ -1,16 +1,4 @@
-## Toolkit
-
-[leetcode helper](https://github.com/harry83017622/leetcodeHelper)
-
-## Other
-
-[setuptools](https://setuptools.readthedocs.io/en/latest/userguide/quickstart.html)
-
-[Command Line Scripts](https://python-packaging.readthedocs.io/en/latest/command-line-scripts.html)
-
-[notion](https://www.notion.so/Leetcode-Study-Group-Note-fceca704377948e5911cf639deb93958)
-
-## Logs
+## LeetCode
 
 - Week 1
     - [x] 13. Roman to Integer
@@ -28,7 +16,7 @@
 - Week 2
     - [x] 169. Majority Element
     - [x] *290. Word Pattern
-    - [ ] 202. Happy Number
+    - [x] 202. Happy Number
     - [x] *217. Contains Duplicate
     - [x] 141. Linked List Cycle
     - [ ] -------------------
@@ -39,9 +27,26 @@
     - [x] 349. Intersection of Two Arrays
 
 - Week 3
-    - [ ] 112. Path Sum
-    - [ ]
+    - [x] 112. Path Sum
+    - [x] 226. Invert Binary Tree
+    - [x] 101. Symmetric Tree
     - [ ] 110. Balanced Binary Tree
-    - [ ]
-    - [ ] 101. Symmetric Tree
-    - [ ] 104. Maximum Depth of Binary Tree
+    - [x] 104. Maximum Depth of Binary Tree
+
+- Week 4
+    - [ ] 20. Valid Parentheses(Stack)
+    - [ ] 225. Implement Stack using Queues(Stack)
+    - [x] 215. Kth Largest Element in an Array(Heap)
+    - [x] 1046. Last Stone Weight (Heap)
+
+## Toolkit
+
+[leetcode helper](https://github.com/harry83017622/leetcodeHelper)
+
+## Other
+
+[setuptools](https://setuptools.readthedocs.io/en/latest/userguide/quickstart.html)
+
+[Command Line Scripts](https://python-packaging.readthedocs.io/en/latest/command-line-scripts.html)
+
+[notion](https://www.notion.so/Leetcode-Study-Group-Note-fceca704377948e5911cf639deb93958)
