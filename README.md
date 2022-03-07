@@ -7,37 +7,38 @@
     - [x] 257. Binary Tree Paths
     - [x] 26. Remove Duplicates from Sorted Array
     - [x] 205. Isomorphic Strings
-    - [ ] 609. Find Duplicate File in System
-    - [ ] 45. Jump Game II
     - [x] 28. Implement strStr()
     - [x] 53. Maximum Subarray
     - [x] 121. Best Time to Buy and Sell Stock
+    - [ ] ---- Medium ----
+    - [ ] 609. Find Duplicate File in System
+    - [ ] 45. Jump Game II
 
 - Week 2
     - [x] 169. Majority Element
-    - [x] *290. Word Pattern
+    - [x] 290. Word Pattern
     - [x] 202. Happy Number
-    - [x] *217. Contains Duplicate
+    - [x] 217. Contains Duplicate
     - [x] 141. Linked List Cycle
-    - [ ] -------------------
-    - [ ] 208. Implement Trie (Prefix Tree)
-    - [ ] 138. Copy List with Random Pointer
     - [x] 1. Two Sum
     - [x] 242. Valid Anagram
     - [x] 349. Intersection of Two Arrays
+    - [ ] ---- Medium ----
+    - [ ] 208. Implement Trie (Prefix Tree)
+    - [ ] 138. Copy List with Random Pointer
 
 - Week 3
     - [x] 112. Path Sum
     - [x] 226. Invert Binary Tree
     - [x] 101. Symmetric Tree
-    - [ ] 110. Balanced Binary Tree
     - [x] 104. Maximum Depth of Binary Tree
+    - [ ] 110. Balanced Binary Tree
 
 - Week 4
-    - [ ] 20. Valid Parentheses(Stack)
-    - [ ] 225. Implement Stack using Queues(Stack)
+    - [x] 20. Valid Parentheses(Stack)
     - [x] 215. Kth Largest Element in an Array(Heap)
     - [x] 1046. Last Stone Weight (Heap)
+    - [ ] 225. Implement Stack using Queues(Stack)
 
 ## Toolkit
 
