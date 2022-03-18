@@ -32,7 +32,7 @@
     - [x] 226. Invert Binary Tree
     - [x] 101. Symmetric Tree
     - [x] 104. Maximum Depth of Binary Tree
-    - [ ] 110. Balanced Binary Tree
+    - [x] 110. Balanced Binary Tree
 
 - Week 4
     - [x] 20. Valid Parentheses(Stack)
