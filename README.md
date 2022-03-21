@@ -10,7 +10,7 @@
     - [x] 28. Implement strStr()
     - [x] 53. Maximum Subarray
     - [x] 121. Best Time to Buy and Sell Stock
-    - [ ] ---- Medium ----
+    - ---- Medium ----
     - [ ] 609. Find Duplicate File in System
     - [ ] 45. Jump Game II
 
@@ -23,7 +23,7 @@
     - [x] 1. Two Sum
     - [x] 242. Valid Anagram
     - [x] 349. Intersection of Two Arrays
-    - [ ] ---- Medium ----
+    - ---- Medium ----
     - [ ] 208. Implement Trie (Prefix Tree)
     - [ ] 138. Copy List with Random Pointer
 
@@ -39,6 +39,11 @@
     - [x] 215. Kth Largest Element in an Array(Heap)
     - [x] 1046. Last Stone Weight (Heap)
     - [x] 225. Implement Stack using Queues(Stack)
+
+- Week 5
+    - [X] 704. Binary Search
+    - [ ] 
+
 
 ## Toolkit
 
