@@ -38,7 +38,7 @@
     - [x] 20. Valid Parentheses(Stack)
     - [x] 215. Kth Largest Element in an Array(Heap)
     - [x] 1046. Last Stone Weight (Heap)
-    - [ ] 225. Implement Stack using Queues(Stack)
+    - [x] 225. Implement Stack using Queues(Stack)
 
 ## Toolkit
 
