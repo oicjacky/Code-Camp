@@ -41,8 +41,8 @@
     - [x] 225. Implement Stack using Queues(Stack)
 
 - Week 5
-    - [X] 704. Binary Search
-    - [ ] 
+    - [x] 704. Binary Search
+    - [x] 35. Search Insert Position
 
 
 ## Toolkit
