@@ -43,6 +43,7 @@
 - Week 5
     - [x] 704. Binary Search
     - [x] 35. Search Insert Position
+    - [x] 69. Sqrt(x)
 
 
 ## Toolkit
