@@ -47,6 +47,15 @@ class Solution:
         print('Now left and right are neighborhood', (left, right))
         return left
 
+    #NOTE: [Newton's method](https://zh.wikipedia.org/wiki/%E7%89%9B%E9%A1%BF%E6%B3%95)
+    # find the root of f: f(s) = s^2 - x = 0
+    def mySqrt(self, x: int) -> int:
+        sqrt = x
+        while sqrt**2 > x:
+            sqrt = (sqrt + (x / sqrt)) //2
+            print(sqrt, sqrt**2)
+        return sqrt
+
 
 if __name__ == "__main__":
     print(Solution().mySqrt(4)) #2
