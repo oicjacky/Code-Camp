@@ -45,6 +45,7 @@
     - [x] 35. Search Insert Position
     - [x] 69. Sqrt(x)
     - [x] 278. First Bad Version
+    - [x] 374. Guess Number Higher or Lower
 
 
 ## Toolkit
