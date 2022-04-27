@@ -47,6 +47,9 @@
     - [x] 278. First Bad Version
     - [x] 374. Guess Number Higher or Lower
 
+- Week 6
+    - [x] 561. Array Partition I
+    - [ ] 
 
 ## Toolkit
 
