@@ -49,6 +49,7 @@
 
 - Week 6
     - [x] 561. Array Partition I
+    - [x] 1051. Height Checker
     - [ ] 
 
 ## Toolkit
