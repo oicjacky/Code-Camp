@@ -52,7 +52,8 @@
     - [x] 1051. Height Checker
     - [x] 1608. Special Array With X Elements Greater Than or Equal X
     - [x] 1710. Maximum Units on a Truck
-    - [ ] 
+    - [x] 1752. Check if Array Is Sorted and Rotated
+
 
 ## Toolkit
 
