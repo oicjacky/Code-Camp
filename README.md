@@ -54,6 +54,10 @@
     - [x] 1710. Maximum Units on a Truck
     - [x] 1752. Check if Array Is Sorted and Rotated
 
+- Week 7
+    - [x] 122. Best Time to Buy and Sell Stock II
+    - [ ] 
+
 
 ## Toolkit
 
@@ -66,3 +70,5 @@
 [Command Line Scripts](https://python-packaging.readthedocs.io/en/latest/command-line-scripts.html)
 
 [notion](https://www.notion.so/Leetcode-Study-Group-Note-fceca704377948e5911cf639deb93958)
+
+[Chrome Driver - WebDriver download](https://chromedriver.chromium.org/downloads)
