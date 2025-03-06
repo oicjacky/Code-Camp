@@ -58,7 +58,8 @@
 
 - Week 7 (Greedy)
     - [x] 122. Best Time to Buy and Sell Stock II
-
+    - [ ] 747. Largest Number At Least Twice of Others
+    - [ ] 944. Delete Columns to Make Sorted
 
 ## Toolkit
 
